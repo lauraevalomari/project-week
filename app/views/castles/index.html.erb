@@ -1,2 +1,22 @@
-<h1>Castles#index</h1>
-<p>Find me in app/views/castles/index.html.erb</p>
+<div class="container ml-5 mb-3 mt-3">
+  <h1><strong>Nos Châteaux</strong></h1>
+</div>
+
+<div class="container mb-5">
+  <div class="cards">
+
+      <% @castles.each do |castle| %>
+        <div class="card-trip">
+          <img src="https://images.unsplash.com/photo-1597466599360-3b9775841aec?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+          <div class="card-trip-infos">
+            <div>
+              <h3><%= link_to castle.name, castle_path(castle.id) %></h3>
+              <p><%= castle.description %></p>
+            </div>
+            <h2 class="card-trip-pricing"></h2>
+          </div>
+        </div>
+      <% end %>
+
+  </div>
+</div>
