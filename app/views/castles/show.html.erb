@@ -1,2 +1,7 @@
-<h1>Castles#show</h1>
-<p>Find me in app/views/castles/show.html.erb</p>
+<div class="container mb-3 mt-3">
+  <h2><strong><%= @castle.name %></strong></h2>
+  <%= cl_image_tag @castle.photo.key, width: 400, height: 300, crop: :fill %>
+  <div class="mt-3">
+    <p><%= @castle.description %></p>
+</div>
+</div>
