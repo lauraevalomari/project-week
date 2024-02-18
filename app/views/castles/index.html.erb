@@ -6,17 +6,27 @@
   <div class="cards">
 
       <% @castles.each do |castle| %>
-        <div class="card-trip">
-          <%= cl_image_tag castle.photo.key %>
-          <div class="card-trip-infos">
-            <div>
-              <h3><%= link_to castle.name, castle_path(castle.id) %></h3>
-              <p><%= castle.description %></p>
-            </div>
-            <h2 class="card-trip-pricing"></h2>
+          <div class="card-trip">
+              <% if castle.photo.present? %>
+                <%= cl_image_tag castle.photo.key %>
+              <% else %>
+                <img src="https://lakewoodcampground.com/wp-content/uploads/2021/06/photos-coming-soon.jpg" alt="">
+              <% end %>
+              <div class="card-trip-infos">
+                <div>
+                  <h3><%= link_to castle.name, castle_path(castle.id) %></h3>
+                  <p><%= castle.description %></p>
+                </div>
+                <h2 class="card-trip-pricing"></h2>
+              </div>
           </div>
-        </div>
-      <% end %>
+        <% end %>
+  </div>
 
+  <div data-controller="toggle" class="col mt-5">
+    <button class="btn btn-primary mb-3" data-action="click->toggle#fire">Add my castle</button>
+    <div data-toggle-target="togglableElement" class="d-none">
+      <%= render "form", castle: @castle %>
+    </div>
   </div>
 </div>
