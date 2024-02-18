@@ -23,10 +23,7 @@
         <% end %>
   </div>
 
-  <div data-controller="toggle" class="col mt-5">
-    <button class="btn btn-primary mb-3" data-action="click->toggle#fire">Add my castle</button>
-    <div data-toggle-target="togglableElement" class="d-none">
-      <%= render "form", castle: @castle %>
-    </div>
+  <div class="col mt-5">
+    <%= link_to "Ajouter mon château", new_castle_path, class: "btn btn-primary" %>
   </div>
 </div>
