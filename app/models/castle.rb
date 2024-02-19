@@ -3,6 +3,9 @@ class Castle < ApplicationRecord
   has_one_attached :photo
   has_many_attached :pictures
 
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   CATEGORIES = [
     "Manoir",
     "Château grandiose",
