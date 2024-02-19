@@ -23,6 +23,12 @@
         <% end %>
   </div>
 
+  <div class="mt-5 mb-5" style ="width: 600px; height: 400px;"
+    data-controller="map"
+    data-map-markets-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+
+
   <div class="col mt-5">
     <%= link_to "Ajouter mon château", new_castle_path, class: "btn btn-primary" %>
   </div>

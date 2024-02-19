@@ -22,6 +22,7 @@ puts "#{User.count} users created!"
 puts 'Creating castles....'
 
 file_corny = URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+# créer un array de pictures pour la show
 manoir_corny = Castle.new(
   name: 'Manoir de Corny',
   category: 'Manoir',
