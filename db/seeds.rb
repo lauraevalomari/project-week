@@ -21,12 +21,13 @@ puts "#{User.count} users created!"
 
 puts 'Creating castles....'
 
-file_corny = URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
 # créer un array de pictures pour la show
+file_corny = URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
 manoir_corny = Castle.new(
   name: 'Manoir de Corny',
   category: 'Manoir',
   address: 'Paris',
+  special_feature: "Chambre Royale",
   description: "Magnifique manoir où vous serez immergés dans la vie du XVIIe siècle",
   user: anna
   )
@@ -38,6 +39,7 @@ chateau_princess = Castle.new(
   name: 'Hôtel de la Princesse',
   category: 'Hôtel Particulier',
   address: 'Lyon',
+  special_feature: "Dîner gastronomique",
   description: "Hôtel de prestige qui n'a rien à envier aux monuments royaux historiques.",
   user: anna)
 chateau_princess.photo.attach(io: file_princess, filename: 'chateau_princess.jpg')
@@ -48,6 +50,7 @@ forteresse_royale = Castle.new(
   name: 'Forteresse Royale',
   category: 'Forteresse',
   address: 'Bordeaux',
+  special_feature: "Visite de château",
   description: "Forteresse réputée de la région, qui abrite en son sein une faune et flore protégées.",
   user: aaron)
 forteresse_royale.photo.attach(io: file_fortress, filename: 'forteresse_royale.jpg')
@@ -58,6 +61,7 @@ palais_elysee = Castle.new(
   name: "Palais de l'Élysée",
   category: 'Pavillon de chasse',
   address: 'Paris',
+  special_feature: "Verre de bienvenue",
   description: "Contrairement à ce qu'on pourrait croire, rien n'est pris au sérieux en ces lieux.",
   user: aaron)
 palais_elysee.photo.attach(io: file_elysee, filename: 'palais_elysee.jpg')
@@ -68,6 +72,7 @@ chateau_disney = Castle.new(
   name: 'Château de la Belle au Bois Dormant',
   category: 'Commanderie',
   address: 'Paris',
+  special_feature: "Arrivée en Carrosse",
   description: "Château emblématique de Princesse Aurore, niché au coeur du parc Disney.",
   user: anna)
 chateau_disney.photo.attach(io: file_disney, filename: 'chateau_disney.jpg')
@@ -78,6 +83,7 @@ palais_agrabah = Castle.new(
   name: "Palais d'Agrabah",
   category: 'Palais',
   address: 'Chambord',
+  special_feature: "Chambre Royale",
   description: "Palais digne des contes de mille et une nuits, plongez dans l'univers féérique et envoûtant d'Aladdin...",
   user: anna)
 palais_agrabah.photo.attach(io: file_agrabah, filename: 'palais_agrabah.jpg')
@@ -88,6 +94,7 @@ demeure_frodon = Castle.new(
   name: 'Demeure de Frodon',
   category: 'Demeure seigneuriale',
   address: 'Chantilly',
+  special_feature: "Visite de château",
   description: "Le Château Frodon se trouve dans un domaine de plus de 20ha.",
   user: anna)
 demeure_frodon.photo.attach(io: file_frodon, filename: 'demeure_frodon.jpg')
@@ -98,6 +105,7 @@ manoir_hante = Castle.new(
   name: 'Manoir Hanté',
   category: 'Manoir',
   address: 'Bordeaux',
+  special_feature: "Manoir Hanté",
   description: "La légende dit que la plus grande sorcière de Salem se cachait dans ce manoir... Oserez-vous séjourner dans ce lieu et percer ses secrets?",
   user: aaron)
 manoir_hante.photo.attach(io: file_hante, filename: 'manoir_hante.jpg')

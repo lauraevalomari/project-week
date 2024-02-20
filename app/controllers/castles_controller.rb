@@ -4,7 +4,8 @@ class CastlesController < ApplicationController
     @markers = @castles.geocoded.map do |castle|
       {
         lat: castle.latitude,
-        lng: castle.longitude
+        lng: castle.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {castle: castle})
       }
     end
   end
