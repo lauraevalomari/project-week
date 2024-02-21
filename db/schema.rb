@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_13_160908) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_19_010110) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,6 +42,35 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_13_160908) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "castle_id", null: false
+    t.date "starting_at"
+    t.date "ending_at"
+    t.integer "total_price"
+    t.bigint "user_id", null: false
+    t.integer "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["castle_id"], name: "index_bookings_on_castle_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "castles", force: :cascade do |t|
+    t.string "category"
+    t.string "address"
+    t.integer "price_per_day"
+    t.boolean "haunted"
+    t.string "special_feature"
+    t.bigint "user_id", null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "name"
+    t.text "description"
+    t.index ["user_id"], name: "index_castles_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -56,4 +85,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_13_160908) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bookings", "castles"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "castles", "users"
 end
