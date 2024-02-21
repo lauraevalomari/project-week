@@ -41,4 +41,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
+  width: 80%;
+  flex-grow: 1;
+  padding: 16px;
+}
+.main-container {
+  display: flex;
+  justify-content: space-between;
 }

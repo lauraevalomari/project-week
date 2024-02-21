@@ -2,7 +2,7 @@
   <h1><strong>Nos Châteaux</strong></h1>
 </div>
 
-<div class="container mb-5">
+<div class="main-container mb-5 ml-3">
   <div class="cards">
 
       <% @castles.each do |castle| %>
@@ -23,13 +23,13 @@
         <% end %>
   </div>
 
-  <div class="mt-5 mb-5" style ="width: 600px; height: 400px;"
+  <div id="map" class="mt-5 mb-5" style ="width: 600px; height: 400px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
+</div>
 
-  <div class="col mt-5">
+<div class="col mt-5">
     <%= link_to "Ajouter mon château", new_castle_path, class: "btn btn-primary" %>
   </div>
-</div>
