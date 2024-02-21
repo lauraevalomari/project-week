@@ -37,20 +37,22 @@
     <p><%= @castle.user.email %></p>
   </div>
 
-  <%= simple_form_for [@castle, @booking] do |f|%>
-    <div>
-      <%= f.input :opening_date,
-              as: :string,
-              input_html: { data: { controller: "datepicker" } } %>
-      <%= f.input :ending_date,
-              as: :string,
-              input_html: { data: { controller: "datepicker" } } %>
-    </div>
+  <div class="col-3">
+      <%= simple_form_for [@castle, @booking] do |f|%>
+        <div>
+          <%= f.input :opening_date,
+                  as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
+          <%= f.input :ending_date,
+                  as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
+        </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, class:"btn btn-primary mt-3" %>
-    </div>
-  <% end %>
+        <div class="form-actions mb-3">
+          <%= f.button :submit, class:"btn btn-primary mt-3" %>
+        </div>
+      <% end %>
+  </div>
 
   <%= link_to "Retour à la liste", castles_path, class: "btn btn-primary" %>
 </div>
