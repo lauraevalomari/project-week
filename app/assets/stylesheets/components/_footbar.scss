@@ -1,0 +1,18 @@
+.footbar {
+  background-color:$white;
+  color:$light-pink;
+  padding: 20px 0;
+  text-align: center;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.footbar p {
+  margin: 0;
+}
+
+.footbar li {
+  display: inline;
+  margin-right: 20px;
+}
