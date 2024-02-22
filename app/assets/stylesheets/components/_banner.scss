@@ -7,8 +7,11 @@
   padding: 100px 20px;
   color: $white;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: flex-end;
-
+  align-content: flex-end;
 }
 
 .banner h1 {
@@ -17,7 +20,6 @@
 }
 
 .btn-banner {
-  display: inline-block;
   padding: 10px 20px;
   background-color:$light-pink;
   color:$white;
@@ -28,4 +30,9 @@
 
 .btn-banner:hover {
   background-color: $goldenrod;
+}
+
+.banner content {
+align-self: flex-end;
+
 }
