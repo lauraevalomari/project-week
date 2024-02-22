@@ -13,9 +13,57 @@
     <% end %>
   <% end %>
 
-  <div class="mt-3">
-    <p><%= @castle.description %></p>
-  </div>
+  <div class="boxalign">
 
-  <%= link_to "Retour à la liste", castles_path, class: "btn btn-primary" %>
+    <div class="description">
+
+      <div class="mt-3">
+        <p><%= @castle.description %></p>
+      </div>
+
+      <div class="mt-3">
+        <% if @castle.special_feature == "Arrivée en Carrosse" %>
+          <p><i class="fa-solid fa-horse"></i> Arrivée en Carrosse</p>
+        <% elsif @castle.special_feature == "Manoir Hanté" %>
+          <p><i class="fa-solid fa-ghost"></i> Manoir Hanté</p>
+        <% elsif @castle.special_feature == "Petit-Déjeuner de Prince ou de Princesse" %>
+          <p><i class="fa-solid fa-mug-saucer"></i><i class="fa-solid fa-bread-slice"></i> Petit-Déjeuner de Prince ou de Princesse</p>
+        <% elsif @castle.special_feature == "Dîner gastronomique" %>
+          <p><i class="fa-solid fa-utensils"></i> Dîner gastronomique</p>
+        <% elsif @castle.special_feature == "Visite de château" %>
+          <p><i class="fa-brands fa-fort-awesome"></i> Visite de château</p>
+        <% elsif @castle.special_feature == "Verre de bienvenue" %>
+          <p><i class="fa-solid fa-martini-glass"></i> Verre de bienvenue</p>
+        <% elsif @castle.special_feature == "Chambre Royale" %>
+          <p><i class="fa-solid fa-bed"></i> Chambre Royale</p>
+        <% end %>
+      </div>
+    </div>
+
+
+
+    <div class="owner">
+      <p><%= @castle.user.email %></p>
+    </div>
+
+
+
+    <div class="bookingform">
+        <%= simple_form_for [@castle, @booking] do |f|%>
+          <div>
+            <%= f.input :opening_date,
+                    as: :string,
+                    input_html: { data: { controller: "datepicker" } } %>
+            <%= f.input :ending_date,
+                    as: :string,
+                    input_html: { data: { controller: "datepicker" } } %>
+          </div>
+
+          <div class="form-actions mb-3">
+            <%= f.button :submit, "Demande de réservation", class:"btn btn-primary mt-3" %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+  <%= link_to "Retour à la liste", castles_path, class: "btn-retour" %>
 </div>
