@@ -1,0 +1,14 @@
+.image .main-image {
+  width: 100%;
+  max-height: 500px;
+  background-size: cover;
+  background-position: top center;
+  object-fit: cover;
+  position: relative;
+}
+
+.main-image .title-image {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
