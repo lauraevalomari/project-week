@@ -15,7 +15,7 @@
               <div class="card-trip-infos">
                 <div>
                   <h3><%= link_to castle.name, castle_path(castle.id) %></h3>
-                  <p><%= castle.description %></p>
+                  <p><%= truncate castle.description %></p>
                 </div>
                 <h2 class="card-trip-pricing"></h2>
               </div>
@@ -29,7 +29,3 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 </div>
-
-<div class="col mt-5">
-    <%= link_to "Ajouter mon château", new_castle_path, class: "btn btn-primary" %>
-  </div>

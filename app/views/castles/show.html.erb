@@ -1,17 +1,23 @@
-<div class="container mb-3 mt-3">
-  <h2><strong><%= @castle.name %></strong></h2>
 
+<div class="image">
   <% if @castle.photo.present? %>
-    <%= cl_image_tag @castle.photo.key, width: 400, height: 300, crop: :fill %>
+      <%= cl_image_tag @castle.photo.key, style: "background-image", class: "main-image" %>
   <% else %>
     <img width=400px height=300px src="https://www.distefanosales.com/wp-content/uploads/2023/08/image-coming-soon-placeholder.png" alt="">
   <% end %>
+
+  <div class="title-image">
+    <h2><strong><%= @castle.name %></strong></h2>
+  </div>
+</div>
 
   <% if @castle.pictures.present? %>
     <% @castle.pictures.each do |picture| %>
       <%= cl_image_tag picture.key, width: 400, height: 300, crop: :fill %>
     <% end %>
   <% end %>
+
+<div class="p-5">
 
   <div class="boxalign">
 
