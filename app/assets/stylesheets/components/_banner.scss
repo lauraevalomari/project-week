@@ -11,6 +11,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   // align-content: flex-end;
 }
 
@@ -26,7 +27,8 @@
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
-  justify-content: center ;
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-banner:hover {
@@ -34,6 +36,6 @@
 }
 
 .banner content {
-  align-self: flex-end;
+  display: flex;
 
 }
