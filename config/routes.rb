@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   resources :castles, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:create]
   end
+
+  resources :bookings, only: [:index, :destroy]
 end
