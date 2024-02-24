@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  border-bottom: 1px solid #B98422;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -23,4 +24,14 @@
 
 .nav-links li:hover {
   border-bottom: 3px solid $light-pink;
+}
+
+.logoandtitle {
+  display: flex;
+  align-items: center;
+  // justify-content: flex-start;
+}
+
+.logoandtitle p {
+  margin: 0;
 }
