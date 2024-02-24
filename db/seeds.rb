@@ -10,6 +10,7 @@
 require "open-uri"
 
 puts "Cleaning Database..."
+Booking.destroy_all
 Castle.destroy_all
 User.destroy_all
 puts "Database cleaned..."
@@ -23,6 +24,10 @@ puts 'Creating castles....'
 
 # créer un array de pictures pour la show
 file_corny = URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+pictures_corny = [
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+]
 manoir_corny = Castle.new(
   name: 'Manoir de Corny',
   category: 'Manoir',
@@ -35,6 +40,9 @@ manoir_corny = Castle.new(
   user: anna
   )
 manoir_corny.photo.attach(io: file_corny, filename: 'manoir_corny.jpg')
+pictures_corny.each do |picture|
+    manoir_corny.pictures.attach(io: picture, filename: 'pictures_manoir_corny.jpg')
+end
 manoir_corny.save!
 
 file_princess = URI.open('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/ed/0c/7f/exterior.jpg?w=900&h=-1&s=1')
@@ -93,7 +101,7 @@ palais_elysee.save!
 
 file_disney = URI.open('https://images.unsplash.com/photo-1597466599360-3b9775841aec?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 chateau_disney = Castle.new(
-  name: 'Château de la Belle au Bois Dormant',
+  name: 'Château de la Belle',
   category: 'Commanderie',
   address: 'Paris',
   price_per_day: 5350,

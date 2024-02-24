@@ -1,6 +1,6 @@
 
   <% if @castle.photo.present? %>
-    <div class="main-image" style="background-image: url('<%= cl_image_path @castle.photo.key, height: 400, crop: :fill %>')">
+    <div class="main-image" style="background-image: url('<%= cl_image_path @castle.photo.key, height: 700 %>')">
         <div class="container">
           <h2 class="title-image"><strong><%= @castle.name %></strong></h2>
         </div>
@@ -17,48 +17,51 @@
   <% end %>
 
 <div class="container">
+      <div class="card-feature">
+        <p>Ce que vous propose <strong><%= @castle.user.email.split('@').first.capitalize %></strong>:</p>
+        <% if @castle.special_feature == "Arrivée en Carrosse" %>
+          <p><i class="fa-solid fa-horse" style="color: #E6D0C5"></i> Arrivée en Carrosse</p>
+        <% elsif @castle.special_feature == "Manoir Hanté" %>
+          <p><i class="fa-solid fa-ghost" style="color: #E6D0C5"></i> Manoir Hanté</p>
+        <% elsif @castle.special_feature == "Petit-Déjeuner de Prince ou de Princesse" %>
+          <p><i class="fa-solid fa-mug-saucer" style="color: #E6D0C5"></i><i class="fa-solid fa-bread-slice"></i> Petit-Déjeuner de Prince ou de Princesse</p>
+        <% elsif @castle.special_feature == "Dîner gastronomique" %>
+          <p><i class="fa-solid fa-utensils" style="color: #E6D0C5"></i> Dîner gastronomique</p>
+        <% elsif @castle.special_feature == "Visite de château" %>
+          <p><i class="fa-brands fa-fort-awesome" style="color: #E6D0C5"></i> Visite de château</p>
+        <% elsif @castle.special_feature == "Verre de bienvenue" %>
+          <p><i class="fa-solid fa-martini-glass" style="color: #E6D0C5"></i> Verre de bienvenue</p>
+        <% elsif @castle.special_feature == "Chambre Royale" %>
+          <p><i class="fa-solid fa-bed" style="color: #E6D0C5"></i> Chambre Royale</p>
+        <% end %>
+      </div>
 
   <div class="details">
 
     <div class="card-description">
-      <div class="mt-3">
+
+      <div class="card-details-description">
+        <p><strong>Description</strong></p>
         <p><%= @castle.description %></p>
       </div>
 
-      <div class="mt-3">
-        <% if @castle.special_feature == "Arrivée en Carrosse" %>
-          <p><i class="fa-solid fa-horse"></i> Arrivée en Carrosse</p>
-        <% elsif @castle.special_feature == "Manoir Hanté" %>
-          <p><i class="fa-solid fa-ghost"></i> Manoir Hanté</p>
-        <% elsif @castle.special_feature == "Petit-Déjeuner de Prince ou de Princesse" %>
-          <p><i class="fa-solid fa-mug-saucer"></i><i class="fa-solid fa-bread-slice"></i> Petit-Déjeuner de Prince ou de Princesse</p>
-        <% elsif @castle.special_feature == "Dîner gastronomique" %>
-          <p><i class="fa-solid fa-utensils"></i> Dîner gastronomique</p>
-        <% elsif @castle.special_feature == "Visite de château" %>
-          <p><i class="fa-brands fa-fort-awesome"></i> Visite de château</p>
-        <% elsif @castle.special_feature == "Verre de bienvenue" %>
-          <p><i class="fa-solid fa-martini-glass"></i> Verre de bienvenue</p>
-        <% elsif @castle.special_feature == "Chambre Royale" %>
-          <p><i class="fa-solid fa-bed"></i> Chambre Royale</p>
-        <% end %>
-      </div>
+
     </div>
 
 
     <div class="card-booking">
-      <div id="owner">
-        <p>Nom de l'hôte: <strong><%= @castle.user.email.split('@').first.capitalize %></strong></p>
-      </div>
 
+      <div class="bookingform">
+        <div class="mb-2">
+          <h5><strong>Prix par nuit: <%= @castle.price_per_day %>€</strong></h5>
+        </div>
 
-
-      <div class="bookingform" data-controller="form-calculate-day" data-action="submit->form-calculate-day#calculate">
           <%= simple_form_for [@castle, @booking] do |f|%>
             <div>
-              <%= f.input :opening_date, 'data-target': 'opening_date',
+              <%= f.input :opening_date, :label => "Jour d'arrivée",
                       as: :string,
                       input_html: { data: { controller: "datepicker" } } %>
-              <%= f.input :ending_date,
+              <%= f.input :ending_date, :label => "Jour de départ",
                       as: :string,
                       input_html: { data: { controller: "datepicker" } } %>
 
