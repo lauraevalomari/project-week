@@ -2,19 +2,19 @@
         <div class="form-inputs">
 
           <%= f.input :name, :label => 'Nom', placeholder: "Nom de votre château" %>
-          <%= f.input :category, :label => 'Type de château', collection: Castle::CATEGORIES %>
+          <%= f.input :category, :placeholder => 'Type de château', collection: Castle::CATEGORIES %>
           <%= f.input :address, :label => 'Addresse',
                       input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
                       wrapper_html: {data: {controller: "address-autocomplete",
                                             address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}%>
-          <%= f.input :description %>
-          <%= f.input :price_per_day, :label => 'Prix par nuit' %>
-          <%= f.input :special_feature, :label => 'Activité associée', collection: Castle::SPECIAL_FEATURES %>
+          <%= f.input :description, placeholder: 'Décrivez ici votre incroyable château' %>
+          <%= f.input :price_per_day, :label => 'Prix par nuit (en EUR)' %>
+          <%= f.input :special_feature, :label => 'Activité proposée à vos invités', collection: Castle::SPECIAL_FEATURES %>
           <%= f.input :photo, :label => 'Votre photo principale', as: :file %>
           <%= f.input :pictures, :label => 'Vos photos supplémentaires', as: :file, input_html: { multiple: true } %>
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Créer mon château", class:"btn btn-primary mt-3" %>
+          <%= f.button :submit, "Créer mon château", class:"btn-new-form" %>
         </div>
       <% end %>
