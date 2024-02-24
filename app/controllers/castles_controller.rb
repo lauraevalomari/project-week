@@ -1,6 +1,11 @@
 class CastlesController < ApplicationController
   def index
-    @castles = Castle.all
+    if params[:query].present?
+      @castles = Castle.where("name ILIKE ? OR address ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%")
+    else
+      @castles = Castle.all
+    end
+
     @markers = @castles.geocoded.map do |castle|
       {
         lat: castle.latitude,
