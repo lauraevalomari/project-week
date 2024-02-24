@@ -1,5 +1,6 @@
       <%= simple_form_for(@castle) do |f|%>
         <div class="form-inputs">
+
           <%= f.input :name, :label => 'Nom', placeholder: "Nom de votre château" %>
           <%= f.input :category, :label => 'Type de château', collection: Castle::CATEGORIES %>
           <%= f.input :address, :label => 'Addresse',
