@@ -14,11 +14,10 @@
               <% end %>
             <% end %>
 
-
               <div class="card-trip-infos">
                 <div>
                   <div class="text-end mb-2">
-                    <p>A partir de <strong><%= castle.price_per_day %> EUR</strong></p>
+                    <p>A partir de <strong><%= number_with_delimiter(castle.price_per_day, :delimiter => " ") %> EUR</strong></p>
                   </div>
                   <div>
                     <h3><%= link_to castle.name, castle_path(castle.id) %></h3>

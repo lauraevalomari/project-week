@@ -53,7 +53,7 @@
 
       <div class="bookingform">
         <div class="mb-2">
-          <h5><strong>Prix par nuit: <%= @castle.price_per_day %>€</strong></h5>
+          <h5><strong>Prix par nuit: <%= number_with_delimiter(@castle.price_per_day, :delimiter => " ") %>€</strong></h5>
         </div>
 
           <%= simple_form_for [@castle, @booking] do |f|%>

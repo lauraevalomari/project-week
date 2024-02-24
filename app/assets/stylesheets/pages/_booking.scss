@@ -1,0 +1,34 @@
+.card-castle {
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+
+.card-castle img {
+  height: 100%;
+  width: 200px;
+  object-fit: cover;
+}
+
+.card-castle h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-castle p {
+  font-size: 15px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-castle .card-castle-infos {
+  padding: 16px;
+}
