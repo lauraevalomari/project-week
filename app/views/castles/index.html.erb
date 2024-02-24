@@ -15,7 +15,7 @@
               <div class="card-trip-infos">
                 <div>
                   <h3><%= link_to castle.name, castle_path(castle.id) %></h3>
-                  <p><%= truncate castle.description %></p>
+                  <p><%= castle.description.truncate(200) %></p>
                 </div>
                 <h2 class="card-trip-pricing"></h2>
               </div>

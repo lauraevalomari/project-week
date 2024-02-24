@@ -1,15 +1,14 @@
 
-<div class="image">
   <% if @castle.photo.present? %>
-      <%= cl_image_tag @castle.photo.key, style: "background-image", class: "main-image" %>
+    <div class="main-image" style="background-image: url('<%= cl_image_path @castle.photo.key, height: 400, crop: :fill %>')">
+        <div class="container">
+          <h2 class="title-image"><strong><%= @castle.name %></strong></h2>
+        </div>
+    </div>
+t
   <% else %>
     <img width=400px height=300px src="https://www.distefanosales.com/wp-content/uploads/2023/08/image-coming-soon-placeholder.png" alt="">
   <% end %>
-
-  <div class="title-image">
-    <h2><strong><%= @castle.name %></strong></h2>
-  </div>
-</div>
 
   <% if @castle.pictures.present? %>
     <% @castle.pictures.each do |picture| %>
@@ -17,12 +16,11 @@
     <% end %>
   <% end %>
 
-<div class="p-5">
+<div class="container">
 
-  <div class="boxalign">
+  <div class="details">
 
-    <div class="description">
-
+    <div class="card-description">
       <div class="mt-3">
         <p><%= @castle.description %></p>
       </div>
@@ -47,29 +45,31 @@
     </div>
 
 
+    <div class="card-booking">
+      <div id="owner">
+        <p>Nom de l'hôte: <strong><%= @castle.user.email.split('@').first.capitalize %></strong></p>
+      </div>
 
-    <div class="owner">
-      <p><%= @castle.user.email %></p>
-    </div>
 
 
+      <div class="bookingform" data-controller="form-calculate-day" data-action="submit->form-calculate-day#calculate">
+          <%= simple_form_for [@castle, @booking] do |f|%>
+            <div>
+              <%= f.input :opening_date, 'data-target': 'opening_date',
+                      as: :string,
+                      input_html: { data: { controller: "datepicker" } } %>
+              <%= f.input :ending_date,
+                      as: :string,
+                      input_html: { data: { controller: "datepicker" } } %>
 
-    <div class="bookingform">
-        <%= simple_form_for [@castle, @booking] do |f|%>
-          <div>
-            <%= f.input :opening_date,
-                    as: :string,
-                    input_html: { data: { controller: "datepicker" } } %>
-            <%= f.input :ending_date,
-                    as: :string,
-                    input_html: { data: { controller: "datepicker" } } %>
-          </div>
+            </div>
+            <div class="form-actions mb-3">
+              <%= f.button :submit, "Demande de réservation", class:"btn btn-primary mt-3" %>
+            </div>
 
-          <div class="form-actions mb-3">
-            <%= f.button :submit, "Demande de réservation", class:"btn btn-primary mt-3" %>
-          </div>
-        <% end %>
+          <% end %>
+      </div>
     </div>
   </div>
-  <%= link_to "Retour à la liste", castles_path, class: "btn-retour" %>
+  <%= link_to "Retour", castles_path, class: "btn-retour" %>
 </div>
