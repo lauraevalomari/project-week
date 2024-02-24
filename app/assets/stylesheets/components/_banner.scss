@@ -19,28 +19,29 @@
   font-size: 70px;
   margin-bottom: 35px;
   background-color: #D6C3BC;
-  padding: 15px;
+  padding: 10px;
   border-radius: 5px;
-  opacity: 0.9;
+  background: rgba(225, 197, 197, 0.555);
+  // opacity: 0.8;
   color: #351926;
+  font-weight: bold;
 }
 
 
 
 .btn-banner {
   padding: 10px 20px;
-  background-color: #351926;
-  color:$white;
+  background-color: #B08968;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
   justify-content: center;
   text-align: center;
-  color: $light-gray;
+  color: #D6C3BC;
 }
 
 .btn-banner:hover {
-  background-color: $goldenrod;
+  background-color: #9C6644;
 }
 
 .banner content {
