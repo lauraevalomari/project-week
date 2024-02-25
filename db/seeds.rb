@@ -116,7 +116,6 @@ file_elysee = URI.open('https://images.unsplash.com/photo-1562333761-677354f4903
 pictures_elysee = [
   URI.open('https://images.rtl.fr/~c/1155v769/rtl/www/1321358-la-salle-des-fetes-de-l-elysee-le-16-avril-2018.jpg'),
   URI.open('https://www.elysee.fr/cdn-cgi/image/width=760%2Cheight=1145/images/default/0001/13/d3eebf74e7a039c6d9cacc3c86ddf166002b0669.jpg'),
-  URI.open('https://www.leparisien.fr/resizer/6osHStQkio110AKzNVLGdhCVjAk=/932x582/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/F5EAFJ4MOX3PSYAXAJDDGG4RJM.jpg'),
   URI.open('https://www.olivierberni-interieurs.com/sites/olivierberni-interieurs.com/files/resize/field/image/abc-599x449.jpg'),
   URI.open('https://magazine.bellesdemeures.com/sites/default/files/edito_migrate/appartement_elysee_bibliotheque_0.jpg'),
   URI.open('https://magazine.bellesdemeures.com/sites/default/files/edito_migrate/appartement_elysee_chambre.jpg')
@@ -220,7 +219,6 @@ demeure_frodon.save!
 
 file_hante = URI.open('https://images.unsplash.com/photo-1602769921397-e870d926e1e8?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 pictures_hante = [
-  URI.open('https://www.selection.ca/wp-content/uploads/2017/10/destinations-talliston-estate.jpg'),
   URI.open('https://maison-hantee.net/wp-content/uploads/2020/11/le-Manoir-du-Tertre.jpg'),
   URI.open('https://i.pinimg.com/originals/9c/ff/fc/9cfffc54a4ce8f33427e6e4633493d16.jpg'),
   URI.open('https://i.pinimg.com/originals/1e/4f/6c/1e4f6c54c67286cc9ec59cbfa163cf4b.jpg'),
