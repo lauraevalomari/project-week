@@ -16,6 +16,7 @@
     <% end %>
   <% end %>
 
+
 <div class="container">
       <div class="card-feature">
         <p>Ce que vous propose <strong><%= @castle.user.email.split('@').first.capitalize %></strong>:</p>
@@ -72,7 +73,7 @@
             </div>
 
             <div class="form-actions mb-3">
-              <%= f.button :submit, "Demande de réservation", class:"btn btn-primary mt-3" %>
+              <%= f.button :submit, "Demande de réservation", class:"btn-retour" %>
             </div>
 
           <% end %>

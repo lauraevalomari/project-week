@@ -37,19 +37,25 @@
   text-align: justify;
 }
 
+
 .btn-retour{
   display: inline-block;
+  margin-bottom: 10px;
   padding: 10px 20px;
   background-color:$white;
   color:$light-pink;
   text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  border: 2px solid $light-pink;
+  transition: background-color 0.3s; border-color: 0.3s;
+  font-weight: bolder;
 }
 
 
 .btn-retour:hover {
-  background-color: $goldenrod;
+  background-color: $light-pink;
+  border-color: $light-pink;
+  color: $white;
 }
 
 .card-feature {
