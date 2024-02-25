@@ -10,16 +10,31 @@
     <img width=400px height=300px src="https://www.distefanosales.com/wp-content/uploads/2023/08/image-coming-soon-placeholder.png" alt="">
   <% end %>
 
-  <% if @castle.pictures.present? %>
-    <% @castle.pictures.each do |picture| %>
-      <%= cl_image_tag picture.key, width: 400, height: 300, crop: :fill %>
-    <% end %>
-  <% end %>
+
 
 
 <div class="container">
-      <div class="card-feature">
-        <p>Ce que vous propose <strong><%= @castle.user.email.split('@').first.capitalize %></strong>:</p>
+  <div class="card-options">
+    <div class="card-category">
+        <% if @castle.category == "Manoir" %>
+          <p><i class="fa-solid fa-chess-rook" style="color: #E6D0C5"></i> Manoir</p>
+        <% elsif @castle.category == "Château grandiose" %>
+          <p><i class="fa-solid fa-chess-rook" style="color: #E6D0C5"></i> Château grandiose</p>
+        <% elsif @castle.category == "Palais" %>
+          <p><i class="fa-solid fa-chess-rook" style="color: #E6D0C5"></i> Palais</p>
+        <% elsif @castle.category == "Forteresse" %>
+          <p><i class="fa-solid fa-chess-rook" style="color: #E6D0C5"></i> Forteresse</p>
+        <% elsif @castle.category == "Hôtel Particulier" %>
+          <p><i class="fa-solid fa-chess-rook" style="color: #E6D0C5"></i> Hôtel Particulier</p>
+        <% elsif @castle.category == "Pavillon de chasse" %>
+          <p><i class="fa-solid fa-chess-rook" style="color: #E6D0C5"></i> Pavillon de chasse</p>
+        <% elsif @castle.category == "Commanderie" %>
+          <p><i class="fa-solid fa-chess-rook" style="color: #E6D0C5"></i> Commanderie</p>
+        <% elsif @castle.category == "Demeure seigneuriale" %>
+          <p><i class="fa-solid fa-chess-rook" style="color: #E6D0C5"></i> Demeure seigneuriale</p>
+        <% end %>
+    </div>
+    <div class="card-feature">
         <% if @castle.special_feature == "Arrivée en Carrosse" %>
           <p><i class="fa-solid fa-horse" style="color: #E6D0C5"></i> Arrivée en Carrosse</p>
         <% elsif @castle.special_feature == "Manoir Hanté" %>
@@ -35,23 +50,35 @@
         <% elsif @castle.special_feature == "Chambre Royale" %>
           <p><i class="fa-solid fa-bed" style="color: #E6D0C5"></i> Chambre Royale</p>
         <% end %>
-      </div>
+    </div>
+    <div class="card-guest">
+      <p><i class="fa-regular fa-user" style="color: #E6D0C5"></i> <%= @castle.number_of_guests %> Invités</p>
+    </div>
+
+  </div>
+
+
 
   <div class="details">
-
     <div class="card-description">
-
       <div class="card-details-description">
         <p><strong>Description</strong></p>
         <p><%= @castle.description %></p>
       </div>
 
-
+      <div class="card-pictures mt-5">
+        <% if @castle.pictures.present? %>
+          <% @castle.pictures.each do |picture| %>
+          <%= cl_image_tag picture.key, width: 250, height: 150, crop: :fill %>
+            <% end %>
+        <% end %>
+      </div>
     </div>
 
 
     <div class="card-booking">
-
+      <p style="font-size: 18px; margin-bottom: 0">Nom de votre hôte:</p>
+      <p style="font-size: 18px;"><strong><%= @castle.user.email.split('@').first.capitalize %></strong></p>
       <div class="bookingform">
         <div class="mb-3">
           <h5><strong>Prix par nuit: <%= number_with_delimiter(@castle.price_per_day, :delimiter => " ") %>€</strong></h5>
@@ -65,10 +92,7 @@
               <%= f.input :ending_date, :label => "Jour de départ",
                       as: :string,
                       input_html: { data: { controller: "datepicker" } } %>
-            </div>
-
-            <div>
-              <%= f.input :message, :label => "Écrire un message" %>
+              <%= f.input :message, :label => "Message", placeholder: "Écrivez ici votre message" %>
               <%= f.input :number_of_guests, :label => "Nombre de voyageurs", as: :integer %>
             </div>
 
@@ -79,6 +103,9 @@
           <% end %>
       </div>
     </div>
+
+
+
   </div>
 
     <%= link_to "Retour à la liste", castles_path, class:"btn btn-primary", id:"button-return" %>
