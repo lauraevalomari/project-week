@@ -51,7 +51,7 @@ manoir_corny.save!
 
 file_princess = URI.open('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/ed/0c/7f/exterior.jpg?w=900&h=-1&s=1')
 pictures_princess = [
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://images.nightcafe.studio/jobs/g2MLz3RROOrtZ5IXNyv3/g2MLz3RROOrtZ5IXNyv3--1--86wqi.jpg?tr=w-1600,c-at_max'),
   URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
   URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
   URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
