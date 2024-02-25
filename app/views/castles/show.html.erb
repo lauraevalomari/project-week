@@ -52,7 +52,7 @@
     <div class="card-booking">
 
       <div class="bookingform">
-        <div class="mb-2">
+        <div class="mb-3">
           <h5><strong>Prix par nuit: <%= number_with_delimiter(@castle.price_per_day, :delimiter => " ") %>€</strong></h5>
         </div>
 
@@ -64,7 +64,6 @@
               <%= f.input :ending_date, :label => "Jour de départ",
                       as: :string,
                       input_html: { data: { controller: "datepicker" } } %>
-
             </div>
             <div class="form-actions mb-3">
               <%= f.button :submit, "Demande de réservation", class:"btn btn-primary mt-3" %>
