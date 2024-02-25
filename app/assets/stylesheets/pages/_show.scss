@@ -62,7 +62,34 @@
   padding-top: 20px;
   padding-left: 20px;
 }
+.card-feature p, i {
+  font-size: 18px;
+}
+.card-category {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.card-category p, i {
+  font-size: 18px;
+}
+.card-guest {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.card-guest p, i {
+  font-size: 18px;
+}
+
+.card-options {
+  display: flex;
+  margin-top: 20px;
+}
 #button-return {
   margin-left: 20px;
   margin-bottom: 100px;
+}
+.card-pictures {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2px;
 }
