@@ -1,6 +1,14 @@
-.container h2 {
+.banner-show h1 {
   color:$white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  bottom:5px;
+
 }
+
+.main-image {
+  position: relative;
+}
+
 
 .description {
   background-color: $white;
