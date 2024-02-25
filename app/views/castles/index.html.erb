@@ -25,12 +25,18 @@
 
               <div class="card-trip-infos">
                 <div>
-                  <div class="text-end mb-2">
-                    <p>A partir de <strong><%= number_with_delimiter(castle.price_per_day, :delimiter => " ") %> EUR</strong></p>
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <p> </p>
+                      <h3 style="margin-top: 15px"><%= link_to castle.name, castle_path(castle.id) %></h3>
+                    </div>
+                    <div class="text-end mb-2">
+                      <p>A partir de </p>
+                      <p style="font-size: 16px"><strong><%= number_with_delimiter(castle.price_per_day, :delimiter => " ") %></strong> EUR</p>
+                    </div>
+
                   </div>
-                  <div>
-                    <h3><%= link_to castle.name, castle_path(castle.id) %></h3>
-                  </div>
+
                   <p><%= castle.description.truncate(150) %></p>
                 </div>
                 <h2 class="card-trip-pricing"></h2>
