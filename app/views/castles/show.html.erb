@@ -1,6 +1,6 @@
 
   <% if @castle.photo.present? %>
-    <div class="main-image" style="background-image: url('<%= cl_image_path @castle.photo.key, height: 700 %>')">
+    <div class="main-image" style="background-image: url('<%= cl_image_path @castle.photo.key, height: 700 %>'); height: 500px;">
         <div class= "banner-show" style="position: absolute; bottom: 24px; left: 136px;">
           <h1 class="title-image"><strong><%= @castle.name %></strong></h1>
         </div>
@@ -73,5 +73,8 @@
       </div>
     </div>
   </div>
-  <%= link_to "Retour", castles_path, class: "btn-retour" %>
+
+    <%= link_to "Retour à la liste", castles_path, class:"btn btn-primary", id:"button-return" %>
+
+
 </div>
