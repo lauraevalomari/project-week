@@ -65,6 +65,12 @@
                       as: :string,
                       input_html: { data: { controller: "datepicker" } } %>
             </div>
+
+            <div>
+              <%= f.input :message, :label => "Écrire un message" %>
+              <%= f.input :number_of_guests, :label => "Nombre de voyageurs", as: :integer %>
+            </div>
+
             <div class="form-actions mb-3">
               <%= f.button :submit, "Demande de réservation", class:"btn btn-primary mt-3" %>
             </div>
