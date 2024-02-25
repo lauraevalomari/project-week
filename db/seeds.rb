@@ -26,6 +26,10 @@ puts 'Creating castles....'
 file_corny = URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
 pictures_corny = [
   URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
   URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
 ]
 manoir_corny = Castle.new(
@@ -46,6 +50,14 @@ end
 manoir_corny.save!
 
 file_princess = URI.open('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/ed/0c/7f/exterior.jpg?w=900&h=-1&s=1')
+pictures_princess = [
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+]
 chateau_princess = Castle.new(
   name: 'Hôtel de la Princesse',
   category: 'Hôtel Particulier',
@@ -64,9 +76,20 @@ chateau_princess = Castle.new(
   En 2013, des travaux de restauration sont entrepris. Les phases de réalisation permettent une ouverture partielle en 2014, puis complète en 2015.",
   user: anna)
 chateau_princess.photo.attach(io: file_princess, filename: 'chateau_princess.jpg')
+pictures_princess.each do |picture|
+  chateau_princess.pictures.attach(io: picture, filename: 'pictures_chateau_princess.jpg')
+end
 chateau_princess.save!
 
 file_fortress = URI.open('https://images.unsplash.com/photo-1536095864675-3f4a97610218?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+pictures_fortress = [
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+]
 forteresse_royale = Castle.new(
   name: 'Forteresse Royale',
   category: 'Forteresse',
@@ -81,9 +104,20 @@ forteresse_royale = Castle.new(
   C’est dans le château principal, le château du Milieu, que se développent les principaux logis et le prieuré Saint-Melaine. La forteresse, qui s'étire sur 300 m de long, avait notamment pour fonction de contrôler la voie allant de Tours au Loudunais qui franchit la Vienne à cet endroit. L'agglomération s'est rangée au pied de la falaise, autour du pont",
   user: aaron)
 forteresse_royale.photo.attach(io: file_fortress, filename: 'forteresse_royale.jpg')
+pictures_fortress.each do |picture|
+  forteresse_royale.pictures.attach(io: picture, filename: 'pictures_forteresse_royale.jpg')
+end
 forteresse_royale.save!
 
 file_elysee = URI.open('https://images.unsplash.com/photo-1562333761-677354f49034?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+pictures_elysee = [
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+]
 palais_elysee = Castle.new(
   name: "Palais de l'Élysée",
   category: 'Pavillon de chasse',
@@ -97,9 +131,20 @@ palais_elysee = Castle.new(
   Construit par l'architecte Armand-Claude Mollet en 1720 pour Louis-Henri de La Tour d'Auvergne, comte d'Évreux, le palais de l'Élysée a une histoire illustre : il est offert par Louis XV à sa favorite, la marquise de Pompadour, en 1753, puis devient le palais princier de Joachim Murat, beau-frère de Napoléon Ier. Ce dernier en fait en 1805 sa résidence impériale. Son neveu, Louis-Napoléon Bonaparte, premier président de la République française, y habite également à partir de 1848.",
   user: aaron)
 palais_elysee.photo.attach(io: file_elysee, filename: 'palais_elysee.jpg')
+pictures_elysee.each do |picture|
+  palais_elysee.pictures.attach(io: picture, filename: 'pictures_palais_elysee.jpg')
+end
 palais_elysee.save!
 
 file_disney = URI.open('https://images.unsplash.com/photo-1597466599360-3b9775841aec?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+pictures_disney = [
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+]
 chateau_disney = Castle.new(
   name: 'Château de la Belle',
   category: 'Commanderie',
@@ -111,9 +156,20 @@ chateau_disney = Castle.new(
   Le château du premier Disneyland est devenu une véritable icône de l'entreprise, apparaissant sur le logo de Walt Disney Pictures, Buena Vista Motion Pictures Group, Buena Vista Music Group, Walt Disney Television et Buena Vista International. En 2007, il est remplacé par un homologue, le Château de Cendrillon, dans l'introduction des films de la Walt Disney Pictures.",
   user: anna)
 chateau_disney.photo.attach(io: file_disney, filename: 'chateau_disney.jpg')
+pictures_disney.each do |picture|
+  chateau_disney.pictures.attach(io: picture, filename: 'pictures_chateau_disney.jpg')
+end
 chateau_disney.save!
 
 file_agrabah = URI.open('https://franks-travelbox.com/wp-content/uploads/2017/11/indien-agra-der-pracc88chtige-palast-taj-mahal-aus-weissem-marmor-ist-das-wahrzeichen-indiens-und-eines-der-weltweit-am-besten-bekannten-bauwerke-des-landes-andrey-khrobostov-fotolia.jpg')
+pictures_agrabah = [
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+]
 palais_agrabah = Castle.new(
   name: "Palais d'Agrabah",
   category: 'Palais',
@@ -125,9 +181,20 @@ palais_agrabah = Castle.new(
   Agrabah apparaît également dans le film en prises de vues réelles sorti en 2019, Aladdin.",
   user: anna)
 palais_agrabah.photo.attach(io: file_agrabah, filename: 'palais_agrabah.jpg')
+pictures_agrabah.each do |picture|
+  palais_agrabah.pictures.attach(io: picture, filename: 'pictures_palais_agrabah.jpg')
+end
 palais_agrabah.save!
 
 file_frodon = URI.open('https://images.unsplash.com/photo-1585572395221-e5c088aff518?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+pictures_frodon = [
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+]
 demeure_frodon = Castle.new(
   name: 'Demeure de Frodon',
   category: 'Demeure seigneuriale',
@@ -139,9 +206,20 @@ demeure_frodon = Castle.new(
   Il existe aujourd'hui plus de 300 châteaux de la Loire. Par la suite, avec le déplacement de la cour en Île-de-France, c'est dans cette région et dans la province historique de la Champagne que fut érigée la plupart des châteaux seigneuriaux. C'est ainsi que furent bâtis les châteaux d'Écouen, de Dampierre ou de Vaux-le-Vicomte.",
   user: anna)
 demeure_frodon.photo.attach(io: file_frodon, filename: 'demeure_frodon.jpg')
+pictures_frodon.each do |picture|
+  demeure_frodon.pictures.attach(io: picture, filename: 'pictures_demeure_frodon.jpg')
+end
 demeure_frodon.save!
 
 file_hante = URI.open('https://images.unsplash.com/photo-1602769921397-e870d926e1e8?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+pictures_hante = [
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
+  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+]
 manoir_hante = Castle.new(
   name: 'Manoir Hanté',
   category: 'Manoir',
@@ -153,6 +231,9 @@ manoir_hante = Castle.new(
   Elle trouve un manoir au prix étrangement abordable, néanmoins, de nombreux phénomènes étranges s'y produisent. Gabbie fait alors appel à Kent, un prêtre. Ce dernier décide de réunir une équipe composée de Ben Matthias, un expert en paranormal ; Bruce, un professeur d'histoire ; et Harriet, une médium du Vieux carré français.",
   user: aaron)
 manoir_hante.photo.attach(io: file_hante, filename: 'manoir_hante.jpg')
+pictures_hante.each do |picture|
+  manoir_hante.pictures.attach(io: picture, filename: 'pictures_manoir_hante.jpg')
+end
 manoir_hante.save!
 
   puts "#{Castle.count} castles created!"
