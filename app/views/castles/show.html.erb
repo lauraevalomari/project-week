@@ -54,7 +54,9 @@
     <div class="card-guest">
       <p><i class="fa-regular fa-user" style="color: #E6D0C5"></i> <%= @castle.number_of_guests %> Invités</p>
     </div>
-
+    <div class="card-address">
+        <p><i class="fa-solid fa-location-dot" style="color: #E6D0C5"></i> <%= @castle.address %></p>
+    </div>
   </div>
 
 
@@ -63,14 +65,19 @@
     <div class="card-description">
       <div class="card-details-description">
         <p><strong>Description</strong></p>
-        <p><%= @castle.description %></p>
+          <div data-controller="toggle">
+            <p><%= @castle.description.truncate(300) %><button style="border: 0px; background-color: white; text-decoration: underline;" data-action="click->toggle#fire"
+           data-action="click->toggle#display">voir plus</button></p>
+           <div data-toggle-target="togglableElement" class="d-none">
+            <p><%= @castle.description[297..-1] %></p>
+           </div>
+          </div>
       </div>
-
       <div class="card-pictures mt-5">
         <% if @castle.pictures.present? %>
           <% @castle.pictures.each do |picture| %>
-          <%= cl_image_tag picture.key, width: 250, height: 150, crop: :fill %>
-            <% end %>
+           <%= cl_image_tag picture.key, width: 250, height: 150, crop: :fill %>
+          <% end %>
         <% end %>
       </div>
     </div>
@@ -93,22 +100,16 @@
                       as: :string,
                       input_html: { data: { controller: "datepicker" } } %>
               <%= f.input :message, :label => "Message", placeholder: "Écrivez ici votre message" %>
-              <%= f.input :number_of_guests, :label => "Nombre de voyageurs", as: :integer %>
+              <%= f.input :number_of_guests, :label => "Nombre d'invités" %>
             </div>
 
             <div class="form-actions mb-3">
               <%= f.button :submit, "Demande de réservation", class:"btn-retour" %>
             </div>
-
           <% end %>
       </div>
     </div>
-
-
-
   </div>
 
-    <%= link_to "Retour à la liste", castles_path, class:"btn btn-primary", id:"button-return" %>
-
-
+  <%= link_to "Retour à la liste", castles_path, class:"btn btn-primary", id:"button-return" %>
 </div>

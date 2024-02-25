@@ -7,4 +7,8 @@ export default class extends Controller {
   fire() {
     this.togglableElementTarget.classList.toggle("d-none")
   }
+
+  display() {
+    this.togglableElementTarget.classList.toggle("d-none")
+  }
 }
