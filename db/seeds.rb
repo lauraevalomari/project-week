@@ -25,12 +25,12 @@ puts 'Creating castles....'
 # créer un array de pictures pour la show
 file_corny = URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
 pictures_corny = [
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+  URI.open('https://www.idfdesign.fr/photos/tables-de-nuit-classiques-de-luxe/royal-table-de-chevet-chevet-antique.jpg'),
+  URI.open('https://cdn.shopify.com/s/files/1/2792/8560/products/manoir-davis-4_2048x.jpg?v=1655320826'),
+  URI.open('https://www.alibabuy.com/photos/sejours/1/3/8/france_138877_154_2.jpg'),
+  URI.open('https://www.kerazan.fr/wp-content/uploads/2020/01/IdF-Manoir-Kerazan-juin-2020-VP_0094-scaled.jpg'),
+  URI.open('https://i.pinimg.com/originals/84/cb/94/84cb9419a366fd864fb35381b979c5be.jpg'),
+  URI.open('https://edenenfrance.voyage/wp-content/uploads/2020/11/Sejour-de-Charme-au-Manoir-Fontaine-Soleil-Manoir-Normandie.jpg')
 ]
 manoir_corny = Castle.new(
   name: 'Manoir de Corny',
@@ -53,11 +53,11 @@ manoir_corny.save!
 file_princess = URI.open('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/ed/0c/7f/exterior.jpg?w=900&h=-1&s=1')
 pictures_princess = [
   URI.open('https://images.nightcafe.studio/jobs/g2MLz3RROOrtZ5IXNyv3/g2MLz3RROOrtZ5IXNyv3--1--86wqi.jpg?tr=w-1600,c-at_max'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+  URI.open('https://d1vp8nomjxwyf1.cloudfront.net/wp-content/uploads/sites/41/2016/11/25132353/hotel-explorers-suite-princesse2.jpg'),
+  URI.open('https://www.hotelprincessecaroline.fr/media/cache/jadro_resize/rc/wtY9glSV1705579823/jadroRoot/medias/superieure-04.jpg'),
+  URI.open('https://www.hotelprincessecaroline.fr/media/cache/jadro_resize/rc/ijY8Uv2X1705579823/jadroRoot/medias/img_2957.jpg'),
+  URI.open('https://assets.hotelaparis.com/uploads/pictures/000/023/575/1376345_483929881740427_3668272399543362700_n.jpg'),
+  URI.open('https://www.yonder.fr/sites/default/files/styles/insertovertitle/public/contenu/destinations/01-MONTE-CARLO%20SBM%20SUITE%20PRINCESSE%20GRACE-86_0.jpg?itok=GmMHaQUX')
 ]
 chateau_princess = Castle.new(
   name: 'Hôtel de la Princesse',
@@ -85,12 +85,12 @@ chateau_princess.save!
 
 file_fortress = URI.open('https://images.unsplash.com/photo-1536095864675-3f4a97610218?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 pictures_fortress = [
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+  URI.open('https://www.hoteldelareine.com/wp-content/uploads/2020/05/1-Chambre-Royale.jpg'),
+  URI.open('https://www.hoteldelareine.com/wp-content/uploads/2020/05/5-Appartement-Royal.jpg'),
+  URI.open('https://www.chateaudechangy.fr/wp-content/uploads/2022/05/chateau-de-changy-chambre-royale-salle-de-bain-e1662643222395.jpg'),
+  URI.open('https://www.chateaudechangy.fr/wp-content/uploads/2023/06/11.jpeg'),
+  URI.open('https://www.chateaudechangy.fr/wp-content/uploads/2022/05/Birmanie-Small-1024x683.jpeg'),
+  URI.open('https://www.chateaudechangy.fr/wp-content/uploads/2022/05/Duchesse-2-Small-e1662641797925.jpeg')
 ]
 forteresse_royale = Castle.new(
   name: 'Forteresse Royale',
@@ -114,12 +114,12 @@ forteresse_royale.save!
 
 file_elysee = URI.open('https://images.unsplash.com/photo-1562333761-677354f49034?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 pictures_elysee = [
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+  URI.open('https://images.rtl.fr/~c/1155v769/rtl/www/1321358-la-salle-des-fetes-de-l-elysee-le-16-avril-2018.jpg'),
+  URI.open('https://www.elysee.fr/cdn-cgi/image/width=760%2Cheight=1145/images/default/0001/13/d3eebf74e7a039c6d9cacc3c86ddf166002b0669.jpg'),
+  URI.open('https://www.leparisien.fr/resizer/6osHStQkio110AKzNVLGdhCVjAk=/932x582/arc-anglerfish-eu-central-1-prod-leparisien.s3.amazonaws.com/public/F5EAFJ4MOX3PSYAXAJDDGG4RJM.jpg'),
+  URI.open('https://www.olivierberni-interieurs.com/sites/olivierberni-interieurs.com/files/resize/field/image/abc-599x449.jpg'),
+  URI.open('https://magazine.bellesdemeures.com/sites/default/files/edito_migrate/appartement_elysee_bibliotheque_0.jpg'),
+  URI.open('https://magazine.bellesdemeures.com/sites/default/files/edito_migrate/appartement_elysee_chambre.jpg')
 ]
 palais_elysee = Castle.new(
   name: "Palais de l'Élysée",
@@ -142,12 +142,12 @@ palais_elysee.save!
 
 file_disney = URI.open('https://images.unsplash.com/photo-1597466599360-3b9775841aec?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 pictures_disney = [
-  URI.open('https://images.nightcafe.studio/jobs/hzY4jBomeNyOrGsEevsE/hzY4jBomeNyOrGsEevsE--1--s9jmp.jpg?tr=w-1600,c-at_max'),
-  URI.open('https://images.nightcafe.studio/jobs/cDh6nHLVIb9cV17IqoTq/cDh6nHLVIb9cV17IqoTq--1--wyy6z.jpg?tr=w-1600,c-at_max'),
-  URI.open('https://images.nightcafe.studio/jobs/g2MLz3RROOrtZ5IXNyv3/g2MLz3RROOrtZ5IXNyv3--1--86wqi.jpg?tr=w-1600,c-at_max'),
-  URI.open('https://images.nightcafe.studio/jobs/eFxl5pKPnPTHgLOgqQ40/eFxl5pKPnPTHgLOgqQ40--1--m8ir8.jpg?tr=w-1600,c-at_max'),
-  URI.open('https://images.nightcafe.studio/jobs/DaW0nRrQQ2XeyfAcz3wg/DaW0nRrQQ2XeyfAcz3wg--1--ofj38.jpg?tr=w-1600,c-at_max'),
-  URI.open('https://images.nightcafe.studio/jobs/ybp8exeJDWv4yD8GbwhF/ybp8exeJDWv4yD8GbwhF--1--ts2qf.jpg?tr=w-1600,c-at_max')
+  URI.open('https://insidethemagic.net/wp-content/uploads/2020/10/foyer.jpg'),
+  URI.open('https://www.blogvacanza.com/wp-content/uploads/2011/03/sala-trono.jpg'),
+  URI.open('https://i.pinimg.com/originals/ff/ee/7f/ffee7f642bd42dcddcb1e62be757f7eb.jpg'),
+  URI.open('https://i.pinimg.com/736x/e0/61/8b/e0618b7f0ddd702caf97b8ab13569beb--princess-theme-bedroom-theme-bedrooms.jpg'),
+  URI.open('https://www.hellodisneyland.com/wp-content/uploads/2015/09/Ch%C3%A2teau-de-la-Belle-au-Bois-Dormant-Disneyland-Paris-sleeping-Beauty-Castle-11.jpg'),
+  URI.open('https://media.disneylandparis.com/d4th/it-it/images/n019434_2021oct01_la-boutique-du-chateau_16-9_tcm764-160274.jpg')
 ]
 chateau_disney = Castle.new(
   name: 'Château de la Belle',
@@ -168,12 +168,12 @@ chateau_disney.save!
 
 file_agrabah = URI.open('https://franks-travelbox.com/wp-content/uploads/2017/11/indien-agra-der-pracc88chtige-palast-taj-mahal-aus-weissem-marmor-ist-das-wahrzeichen-indiens-und-eines-der-weltweit-am-besten-bekannten-bauwerke-des-landes-andrey-khrobostov-fotolia.jpg')
 pictures_agrabah = [
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+  URI.open('https://i.pinimg.com/originals/d0/5f/c4/d05fc4e649fcacfe54ba36c8d76c716b.png'),
+  URI.open('https://cdn.modlar.com/photos/2908/img/s_1920_x/the_taj_mahal_56aa8b2a527e5.jpg'),
+  URI.open('https://1.bp.blogspot.com/-OYYGH5hfjnw/Vgh87vXbXII/AAAAAAAABcs/c7qVQZqevak/s1600/jardin-taj-mahal.jpg'),
+  URI.open('https://cdn.kiwicollection.com/media/property/PR002928/xl/002928-20-luxury-grand-room.jpg'),
+  URI.open('https://www.home-designing.com/wp-content/uploads/2014/09/marble-bathroom-design-600x337.jpg'),
+  URI.open('https://www.fourwheeldriveindia.com/blog/wp-content/uploads/2019/10/interior-of-taj-mahal.jpg')
 ]
 palais_agrabah = Castle.new(
   name: "Palais d'Agrabah",
@@ -194,12 +194,12 @@ palais_agrabah.save!
 
 file_frodon = URI.open('https://images.unsplash.com/photo-1585572395221-e5c088aff518?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 pictures_frodon = [
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+  URI.open('https://photo.comptoir.fr/asset/voyage/2860/royaume-uni/contin/hebergement-dans-la-region-d-inverness-ecosse-423186-1678x1080.jpg'),
+  URI.open('https://www.comptoir.fr/imgProduits/SCO/493105.ori.jpg'),
+  URI.open('https://photo.comptoir.fr/asset/voyage/2862/royaume-uni/oban/hebergement-de-charme-dans-l-argyll-ecosse-552530-1626x1080.jpg'),
+  URI.open('https://maison-monde.com/wp-content/uploads/2019/01/manoir-%C3%A9cossais-Abbotsford-6.jpg'),
+  URI.open('https://i.pinimg.com/originals/cb/7f/29/cb7f29f5f4e860a81ef45b6418429141.jpg'),
+  URI.open('https://manoirdupont.com/wp-content/uploads/2014/12/Salle-a-manger-medievale.jpg')
 ]
 demeure_frodon = Castle.new(
   name: 'Demeure de Frodon',
@@ -220,12 +220,12 @@ demeure_frodon.save!
 
 file_hante = URI.open('https://images.unsplash.com/photo-1602769921397-e870d926e1e8?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 pictures_hante = [
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+  URI.open('https://www.selection.ca/wp-content/uploads/2017/10/destinations-talliston-estate.jpg'),
+  URI.open('https://maison-hantee.net/wp-content/uploads/2020/11/le-Manoir-du-Tertre.jpg'),
+  URI.open('https://i.pinimg.com/originals/9c/ff/fc/9cfffc54a4ce8f33427e6e4633493d16.jpg'),
+  URI.open('https://i.pinimg.com/originals/1e/4f/6c/1e4f6c54c67286cc9ec59cbfa163cf4b.jpg'),
+  URI.open('https://www.sortiraparis.com/images/80/62403/548802-house-of-spirits-une-soiree-cocktails-dans-une-maison-hantee-a-paris.jpg'),
+  URI.open('https://tuxedodesign.ca/wp-content/uploads/2018/06/DSC_0029.jpg')
 ]
 manoir_hante = Castle.new(
   name: 'Manoir Hanté',
