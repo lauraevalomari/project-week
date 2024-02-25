@@ -138,12 +138,12 @@ palais_elysee.save!
 
 file_disney = URI.open('https://images.unsplash.com/photo-1597466599360-3b9775841aec?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
 pictures_disney = [
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg'),
-  URI.open('https://www.adressesexclusives.com/wp-content/uploads/2020/06/Manoir_exterieur.jpg')
+  URI.open('https://images.nightcafe.studio/jobs/hzY4jBomeNyOrGsEevsE/hzY4jBomeNyOrGsEevsE--1--s9jmp.jpg?tr=w-1600,c-at_max'),
+  URI.open('https://images.nightcafe.studio/jobs/cDh6nHLVIb9cV17IqoTq/cDh6nHLVIb9cV17IqoTq--1--wyy6z.jpg?tr=w-1600,c-at_max'),
+  URI.open('https://images.nightcafe.studio/jobs/g2MLz3RROOrtZ5IXNyv3/g2MLz3RROOrtZ5IXNyv3--1--86wqi.jpg?tr=w-1600,c-at_max'),
+  URI.open('https://images.nightcafe.studio/jobs/eFxl5pKPnPTHgLOgqQ40/eFxl5pKPnPTHgLOgqQ40--1--m8ir8.jpg?tr=w-1600,c-at_max'),
+  URI.open('https://images.nightcafe.studio/jobs/DaW0nRrQQ2XeyfAcz3wg/DaW0nRrQQ2XeyfAcz3wg--1--ofj38.jpg?tr=w-1600,c-at_max'),
+  URI.open('https://images.nightcafe.studio/jobs/ybp8exeJDWv4yD8GbwhF/ybp8exeJDWv4yD8GbwhF--1--ts2qf.jpg?tr=w-1600,c-at_max')
 ]
 chateau_disney = Castle.new(
   name: 'Château de la Belle',
