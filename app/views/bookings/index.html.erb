@@ -14,15 +14,19 @@
         <div class="d-flex align-items-center">
           <div class="card-castle-infos">
             <h2><%= booking.castle.name %></h2>
-            <p><i class="fa-regular fa-calendar"></i> Période: du <strong><%= booking.opening_date %> au <%= booking.ending_date %></strong></p>
-             <% period = booking.ending_date - booking.opening_date %>
+            <p><i class="fa-regular fa-calendar"></i> Période: du <strong>
+              <% a = booking.opening_date.to_s.split('-') %>
+              <%= booking_opening = "#{a[2]}-#{a[1]}-#{a[0]}" %></strong> au <strong>
+              <% b = booking.ending_date.to_s.split('-') %>
+              <%= booking_ending = "#{b[2]}-#{b[1]}-#{b[0]}" %></strong></p>
+            <% period = booking.ending_date - booking.opening_date %>
             <% number_day = period.to_s.first.to_i %>
             <% if period == 1 %>
               <p>Soit <strong>1</strong> nuit</p>
             <% else %>
               <p>Soit <strong><%= number_day %></strong> nuits</p>
             <% end %>
-            <p> <i class="fa-regular fa-user"></i> Nombre d'invités: <strong><%= booking.number_of_guests %></strong></p>
+            <p> <i class="fa-regular fa-user"></i> Nombre d'invité(s): <strong><%= booking.number_of_guests.to_i %></strong></p>
             <p> <i class="fa-solid fa-euro-sign"></i> Prix par nuit: <strong><%= number_with_delimiter(booking.castle.price_per_day, :delimiter => " ") %>€</strong></p>
           </div>
 
