@@ -1,0 +1,49 @@
+.card-castle {
+  overflow: hidden;
+  height: 160px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.card-delete {
+  margin-left: 170px;
+  // text-align: right;
+}
+
+
+.card-castle img {
+  height: 160px;
+  width: 240px;
+  object-fit: cover;
+}
+
+.card-castle h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-castle p {
+  font-size: 15px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-castle a:hover {
+
+  opacity: 0.8
+}
+
+.card-castle .card-castle-infos {
+  padding: 16px;
+}
+
+#button-return-booking {
+  margin-bottom: 100px;
+}

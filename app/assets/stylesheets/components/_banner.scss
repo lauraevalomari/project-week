@@ -3,36 +3,48 @@
   background-position: top center;
   background-size: cover;
   max-width : 100%;
-  height: 440px;
+  height: 100vh;
   padding: 100px 20px;
   color: $white;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-end;
-  align-content: flex-end;
+  align-items: center;
+  text-align: center;
+  // align-content: flex-end;
 }
 
 .banner h1 {
-  font-size: 44px;
-  margin-bottom: 10px;
+  font-size: 70px;
+  margin-bottom: 35px;
+  background-color: #D6C3BC;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(225, 197, 197, 0.555);
+  // opacity: 0.8;
+  color: #351926;
+  font-weight: bold;
 }
+
+
 
 .btn-banner {
   padding: 10px 20px;
-  background-color:$light-pink;
-  color:$white;
+  background-color: #B08968;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s;
+  justify-content: center;
+  text-align: center;
+  color: #D6C3BC;
 }
 
 .btn-banner:hover {
-  background-color: $goldenrod;
+  background-color: #9C6644;
 }
 
 .banner content {
-align-self: flex-end;
+  display: flex;
 
 }

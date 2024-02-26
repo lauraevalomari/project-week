@@ -1,0 +1,43 @@
+<div class="p-5">
+  <h1><strong>Mes réservations</strong></h1>
+</div>
+
+<div class="row">
+  <div class="col-9 col-md-7 offset-lg-1">
+    <% @bookings.each do |booking| %>
+      <div class="card-castle">
+        <%= link_to castle_path(booking.castle) do %>
+          <% if booking.castle.photo.attached? %>
+            <%= cl_image_tag booking.castle.photo.key, width: 160, height: 180 %>
+          <% end %>
+        <% end %>
+        <div class="d-flex align-items-center">
+          <div class="card-castle-infos">
+            <h2><%= booking.castle.name %></h2>
+            <p><i class="fa-regular fa-calendar"></i> Période: du <strong><%= booking.opening_date %> au <%= booking.ending_date %></strong></p>
+             <% period = booking.ending_date - booking.opening_date %>
+            <% number_day = period.to_s.first.to_i %>
+            <% if period == 1 %>
+              <p>Soit <strong>1</strong> nuit</p>
+            <% else %>
+              <p>Soit <strong><%= number_day %></strong> nuits</p>
+            <% end %>
+            <p> <i class="fa-regular fa-user"></i> Nombre d'invités: <strong><%= booking.number_of_guests %></strong></p>
+            <p> <i class="fa-solid fa-euro-sign"></i> Prix par nuit: <strong><%= number_with_delimiter(booking.castle.price_per_day, :delimiter => " ") %>€</strong></p>
+          </div>
+
+          <div class="card-delete">
+            <i class="fa-solid fa-trash" style="color: #E6D0C5"></i>
+            <%= link_to "Annuler ma réservation", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="row pt-3">
+  <div class="col-9 col-md-6 offset-lg-1">
+      <%= link_to "Retour à la liste", castles_path, class:"btn btn-primary mt-3", id:"button-return-booking" %>
+    </div>
+</div>

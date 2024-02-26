@@ -1,0 +1,35 @@
+.details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.card-description {
+    width: 800px;
+    border-radius: 3px;
+    // box-shadow: 0 0 5px rgb(230,230,230);
+    text-align: justify;
+    padding: 20px;
+    margin-top: 50px;
+    // border: 1px solid rgb(230,230,230);
+}
+
+.card-booking {
+  width: 400px;
+    border-radius: 3px;
+    // box-shadow: 0 0 5px rgb(230,230,230);
+    text-align: center;
+    // padding: 20px;
+    // border: 1px solid rgb(230,230,230);
+}
+
+.card-details-description {
+  box-shadow: 0 0 5px rgb(230,230,230);
+  padding: 20px
+}
+
+// Formulaire de la new
+// .address-form {
+
+// }
