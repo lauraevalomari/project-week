@@ -5,3 +5,14 @@
   box-shadow: none;
   background-color: transparent;
 }
+
+.mapboxgl-ctrl-geocoder--input {
+  width: 100%;
+}
+
+.mapboxgl-ctrl-geocoder--pin-right {
+  display: none
+}
+.mapboxgl-ctrl-geocoder--icon-search {
+  display: none
+}
