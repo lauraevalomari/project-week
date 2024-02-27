@@ -9,7 +9,7 @@
                                             address_autocomplete_api_key_value: ENV["MAPBOX_API_KEY"]}}%>
           <%= f.input :description, placeholder: 'Décrivez ici votre incroyable château' %>
           <%= f.input :price_per_day, :label => 'Prix par nuit (en EUR)' %>
-          <%= f.input :number_of_guests, :label => "Nombre d'invités maximum" %>
+          <%# <%= f.input :number_of_guests, :label => "Nombre d'invités maximum" %> %>
           <%= f.input :special_feature, :label => 'Activité proposée à vos invités', collection: Castle::SPECIAL_FEATURES %>
           <%= f.input :photo, :label => 'Votre photo principale', as: :file %>
           <%= f.input :pictures, :label => 'Vos photos supplémentaires', as: :file, input_html: { multiple: true } %>
