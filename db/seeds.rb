@@ -123,7 +123,7 @@ pictures_elysee = [
 palais_elysee = Castle.new(
   name: "Palais de l'Élysée",
   category: 'Pavillon de chasse',
-  address: 'Paris',
+  address: 'Bordeaux',
   price_per_day: 12400,
   special_feature: "Verre de bienvenue",
   number_of_guests: 6,
@@ -151,7 +151,7 @@ pictures_disney = [
 chateau_disney = Castle.new(
   name: 'Château de la Belle',
   category: 'Commanderie',
-  address: 'Paris',
+  address: 'Bordeaux',
   price_per_day: 5350,
   number_of_guests: 10,
   special_feature: "Arrivée en Carrosse",
@@ -203,7 +203,7 @@ pictures_frodon = [
 demeure_frodon = Castle.new(
   name: 'Demeure de Frodon',
   category: 'Demeure seigneuriale',
-  address: 'Chantilly',
+  address: 'Bordeaux',
   price_per_day: 1900,
   special_feature: "Visite de château",
   number_of_guests: 6,
