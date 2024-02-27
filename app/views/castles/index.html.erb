@@ -2,14 +2,15 @@
   <h1><strong>Notre sélection de châteaux</strong></h1>
 </div>
 
-<div class="container mt-3">
-  <%= form_with(url: castles_path, method: :get, local: true, class: "mb-3") do %>
-    <div class="input-group">
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Rechercher par nom ou ville" %>
-      <button type="submit" class="btn btn-primary">Rechercher</button>
-    </div>
+
+ <div class="container mb-3 " style="width: 800px;">
+  <%= form_with(url: castles_path, method: :get, local: true) do %>
+   <div class="input-group">
+     <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Recherche le chateau de tes rêves" %>
+     <button type="submit" class="btn btn-primary">Rechercher</button>
+   </div>
   <% end %>
-</div>
+ </div>
 
 <div class="main-container mb-5 ml-3">
   <div class="cards">

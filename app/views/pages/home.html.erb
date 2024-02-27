@@ -1,7 +1,7 @@
-<div class="container mt-3">
+<div class="container mt-3" style="width: 800px;">
   <%= form_with(url: castles_path, method: :get, local: true, class: "mb-3") do %>
     <div class="input-group">
-      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Rechercher par nom ou ville" %>
+      <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Recherche le chateau de tes rêves" %>
       <button type="submit" class="btn btn-primary">Rechercher</button>
     </div>
   <% end %>
@@ -9,7 +9,7 @@
 
 <div class="banner">
   <div class="content">
-      <h1>A vous la vie de château</h1>
+      <h1>À vous la vie de château</h1>
     <%= link_to "Voir nos châteaux", castles_path, class:"btn-banner" %>
   </div>
 </div>
