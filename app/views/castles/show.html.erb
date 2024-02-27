@@ -66,10 +66,12 @@
       <div class="card-details-description">
         <p><strong>Description</strong></p>
           <div data-controller="toggle">
-            <p><%= @castle.description.truncate(300) %><button style="border: 0px; background-color: white; text-decoration: underline;" data-action="click->toggle#fire"
+            <p data-toggle-target="descriptionTruncate"><%= @castle.description.truncate(300) %><button style="border: 0px; color: #DEC0B2; background-color: white; font-weight: bold;"
            data-action="click->toggle#display">voir plus</button></p>
            <div data-toggle-target="togglableElement" class="d-none">
-            <p><%= @castle.description[297..-1] %></p>
+            <p><%= @castle.description %></p>
+            <button style="border: 0px; color: #DEC0B2; background-color: white; font-weight: bold"
+           data-action="click->toggle#remove">Voir moins</button>
            </div>
           </div>
       </div>
@@ -94,9 +96,11 @@
           <%= simple_form_for [@castle, @booking] do |f|%>
             <div>
               <%= f.input :opening_date, :label => "Jour d'arrivée",
+                      dateFormat: "d-m-Y",
                       as: :string,
                       input_html: { data: { controller: "datepicker" } } %>
               <%= f.input :ending_date, :label => "Jour de départ",
+                      dateFormat: "d-m-Y",
                       as: :string,
                       input_html: { data: { controller: "datepicker" } } %>
               <%= f.input :message, :label => "Message", placeholder: "Écrivez ici votre message" %>
