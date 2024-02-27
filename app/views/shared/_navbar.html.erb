@@ -6,14 +6,15 @@
           <%= image_tag "logo_castle.png"%>
         <% end %>
       </div>
-      <p>A vous la vie de château</p>
+      <div id="site-name">A vous la vie de château</div>
     </div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="left-navbar">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<div class="left-navbar">
       <ul class="nav-links">
         <li><%= link_to "Châteaux", castles_path %></li>
         <li><%= link_to "Mettre en ligne mon château", new_castle_path %></li>
@@ -21,8 +22,6 @@
       </ul>
 
     </div>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
 

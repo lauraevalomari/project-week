@@ -2,6 +2,8 @@
   justify-content: space-between;
   background: white;
   border-bottom: 1px solid #B98422;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -13,8 +15,13 @@
 }
 
 .left-navbar > ul {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   margin-bottom: 0;
   margin-top: 0;
+  text-align: center;
+  align-content:center ;
 }
 
 .nav-links li {

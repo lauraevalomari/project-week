@@ -16,3 +16,45 @@ a {
   text-decoration: none;
   color: black;
 }
+
+/*Media Queries*/
+
+/*Smallest device*/
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+  #site-name {
+    display: none;
+  }
+
+  .navbar-lewagon {
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #B98422;
+    flex-direction: column;
+    text-align: center;
+  }
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+    flex-direction: column;
+    text-align: center;
+  }
+  .left-navbar > ul {
+    margin-bottom: 0;
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    flex-shrink: 2;
+    display: flex;
+    margin-right: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+}
