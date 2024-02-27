@@ -2,7 +2,7 @@
         <div class="form-inputs">
 
           <%= f.input :name, :label => 'Nom', placeholder: "Nom de votre château" %>
-          <%= f.input :category, :placeholder => 'Type de château', collection: Castle::CATEGORIES %>
+          <%= f.input :category, :label => 'Catégorie', :placeholder => "Type de château", collection: Castle::CATEGORIES %>
           <%= f.input :address, :label => 'Adresse',
                       input_html: {data: {address_autocomplete_target: "address"}, class: "d-none"},
                       wrapper_html: {data: {controller: "address-autocomplete",
