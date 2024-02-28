@@ -19,8 +19,8 @@ a {
 
 /*Media Queries*/
 
-/*Smallest device*/
-@media (min-width: 100px) and (max-width: 575px) {
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .cards {
     grid-template-columns: 1fr;
   }
@@ -48,7 +48,6 @@ a {
     margin-top: 0;
     flex-direction: column;
   }
-
   .nav-links li {
     flex-shrink: 2;
     display: flex;
@@ -57,4 +56,129 @@ a {
     text-align: center;
   }
 
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contact {
+    justify-content: center;
+  }
+
+  .footer-labels {
+    display: none;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contact {
+    justify-content: center;
+  }
+
+  .footer-labels {
+    display: none;
+  }
+
+  // #site-name {
+  //   display: none;
+  // }
+
+  // .navbar-lewagon {
+  //   justify-content: space-between;
+  //   background: white;
+  //   border-bottom: 1px solid #B98422;
+  //   flex-direction: column;
+  //   text-align: center;
+  // }
+  // .navbar-lewagon .navbar-collapse {
+  //   flex-grow: 0;
+  //   flex-direction: column;
+  //   text-align: center;
+  // }
+  // .left-navbar > ul {
+  //   margin-bottom: 0;
+  //   margin-top: 0;
+  //   flex-direction: column;
+  // }
+  // .nav-links li {
+  //   flex-shrink: 2;
+  //   display: flex;
+  //   margin-right: 20px;
+  //   flex-direction: column;
+  //   text-align: center;
+  // }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: none;
+  }
+
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contact {
+    justify-content: center;
+  }
+
+  .footer-labels {
+    display: block;
+  }
+}
+// /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-labels {
+    display: block;
+  }
+}
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #map {
+    display: block;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-labels {
+    display: block;
+  }
 }
