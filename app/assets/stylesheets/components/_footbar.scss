@@ -1,14 +1,15 @@
-footer {
+.footer {
   background: #F4F4F4;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 100px;
+  height: 60px;
   padding: 0px 50px;
   color: #351926;
-  // position:fixed;
-  // bottom: 0;
+  position: fixed;
+  bottom: 0;
   width: 100%;
+  align-self: flex-end;
 }
 
 .footer-contact {
