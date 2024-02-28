@@ -17,6 +17,9 @@ a {
   color: black;
 }
 
+.body {
+  align-content: flex-end;
+}
 
 /*Media Queries*/
 /* Extra small devices (phones, 600px and down) */
@@ -147,7 +150,7 @@ a {
     display: block;
   }
 
-  .footer {
+  footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
