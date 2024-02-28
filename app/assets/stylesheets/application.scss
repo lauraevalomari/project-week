@@ -90,35 +90,6 @@ a {
   .footer-labels {
     display: none;
   }
-
-  // #site-name {
-  //   display: none;
-  // }
-
-  // .navbar-lewagon {
-  //   justify-content: space-between;
-  //   background: white;
-  //   border-bottom: 1px solid #B98422;
-  //   flex-direction: column;
-  //   text-align: center;
-  // }
-  // .navbar-lewagon .navbar-collapse {
-  //   flex-grow: 0;
-  //   flex-direction: column;
-  //   text-align: center;
-  // }
-  // .left-navbar > ul {
-  //   margin-bottom: 0;
-  //   margin-top: 0;
-  //   flex-direction: column;
-  // }
-  // .nav-links li {
-  //   flex-shrink: 2;
-  //   display: flex;
-  //   margin-right: 20px;
-  //   flex-direction: column;
-  //   text-align: center;
-  // }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
@@ -140,7 +111,7 @@ a {
   }
 
   .footer-labels {
-    display: block;
+    display: none;
   }
 }
 // /* Large devices (laptops/desktops, 992px and up) */
