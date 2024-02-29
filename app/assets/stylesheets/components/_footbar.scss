@@ -3,19 +3,25 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 100px;
+  height: 60px;
   padding: 0px 50px;
   color: #351926;
-  position:fixed;
+  position: fixed;
   bottom: 0;
   width: 100%;
+<<<<<<< HEAD
   margin-top: 100px;
+=======
+  align-self: flex-end;
+>>>>>>> fba3111291a7a7b79022cc3821c95c280d1bc24a
 }
 
 .footer-contact {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
+
 .footer-contact p {
   margin-bottom: 0;
   padding: 0px 5px;
@@ -31,6 +37,7 @@
   font-size: 24px;
   padding: 0px 10px;
 }
+
 .footer-links i:hover {
   color: #DDB892;
 }

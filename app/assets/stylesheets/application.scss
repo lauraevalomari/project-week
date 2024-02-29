@@ -17,10 +17,13 @@ a {
   color: black;
 }
 
-/*Media Queries*/
+.body {
+  align-content: flex-end;
+}
 
-/*Smallest device*/
-@media (min-width: 100px) and (max-width: 575px) {
+/*Media Queries*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
   .cards {
     grid-template-columns: 1fr;
   }
@@ -48,7 +51,6 @@ a {
     margin-top: 0;
     flex-direction: column;
   }
-
   .nav-links li {
     flex-shrink: 2;
     display: flex;
@@ -57,4 +59,104 @@ a {
     text-align: center;
   }
 
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contact {
+    justify-content: center;
+  }
+
+  .footer-labels {
+    display: none;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  #map {
+    display: none;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contact {
+    justify-content: center;
+  }
+
+  .footer-labels {
+    display: none;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: none;
+  }
+
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-contact {
+    justify-content: center;
+  }
+
+  .footer-labels {
+    display: none;
+  }
+}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  #map {
+    display: block;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-labels {
+    display: block;
+  }
+}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #map {
+    display: block;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer-labels {
+    display: block;
+  }
 }
